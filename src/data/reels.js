@@ -1,0 +1,102 @@
+import subhashree from '../assets/reel/subhashree.mp4';
+import nisha from '../assets/reel/nisha.mp4';
+import avneet from '../assets/reel/avneet (1).mp4';
+
+export const reelsData = [
+  {
+    id: 'reel-avneet',
+    creator: 'Avneet',
+    username: '@avneet',
+    avatar: '/creators/meera.jpg',
+    video: avneet,
+    poster: '/reels/poster-3.jpg',
+    platform: 'Creator Reel',
+    category: 'Creator',
+    followers: '734K',
+    likes: '88.7K',
+    comments: '1,642',
+    shares: '19.8K',
+    saves: '6.4K',
+    views: '980K',
+    engagementRate: '7.6%',
+    soundTitle: 'Original audio — avneet',
+    brandPartner: 'Everyday denim',
+    product: {
+      name: 'Navy camisole and straight jeans',
+      detail: 'Navy camisole with straight blue jeans.',
+    },
+    collabAd: {
+      brand: 'Everyday denim',
+      format: 'Instagram Reel',
+      type: 'Brand collaboration',
+      placement: 'Reels feed',
+      objective: 'Everyday look and wardrobe discovery',
+    },
+    caption: 'avneet',
+    tags: ['Creator', 'Fashion']
+  },
+  {
+    id: 'reel-subhashree',
+    creator: 'Subhashree',
+    username: '@subhashree',
+    avatar: '/creators/ashi.jpg',
+    video: subhashree,
+    poster: '/reels/poster-1.jpg',
+    platform: 'Creator Reel',
+    category: 'Fashion',
+    followers: '1.2M followers',
+    likes: '128K',
+    comments: '2,431',
+    shares: '18.9K',
+    saves: '4.2K',
+    views: '2.4M',
+    engagementRate: '9.2%',
+    soundTitle: 'Original audio — subhashree',
+    brandPartner: 'Festive fashion',
+    product: {
+      name: 'Embroidered festive skirt set',
+      detail: 'Black crop top, floral embroidered skirt, and a silver cuff.',
+    },
+    collabAd: {
+      brand: 'Festive fashion',
+      format: 'Instagram Reel',
+      type: 'Brand collaboration',
+      placement: 'Reels feed',
+      objective: 'Show the outfit and drive saves',
+    },
+    caption: 'subhashree',
+    tags: ['Fashion', 'Lifestyle']
+  },
+  {
+    id: 'reel-nisha',
+    creator: 'Nisha',
+    username: '@nisha',
+    avatar: '/creators/ananya.jpg',
+    video: nisha,
+    poster: '/reels/poster-2.jpg',
+    platform: 'Creator Reel',
+    category: 'Lifestyle',
+    followers: '842K',
+    likes: '96.2K',
+    comments: '2,186',
+    shares: '16.9K',
+    saves: '5.1K',
+    views: '1.6M',
+    engagementRate: '8.4%',
+    soundTitle: 'Original audio — nisha',
+    brandPartner: 'Lifestyle wardrobe',
+    product: {
+      name: 'White shirt and tailored trousers',
+      detail: 'Relaxed white shirt, black trousers, and a gold chain.',
+    },
+    collabAd: {
+      brand: 'Lifestyle wardrobe',
+      format: 'Instagram Reel',
+      type: 'Brand collaboration',
+      placement: 'Reels feed',
+      objective: 'Lifestyle styling and product recall',
+    },
+    caption: 'nisha',
+    tags: ['Lifestyle']
+  }
+];

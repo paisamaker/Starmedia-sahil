@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /signup
+Disallow: /checkout
+Disallow: /cart
+Disallow: /profile
+Disallow: /api
+
+Sitemap: https://starmediainfluencer.com/sitemap.xml

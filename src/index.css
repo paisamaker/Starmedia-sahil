@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #F6F4F0;
+    --bg-secondary: #FFFcf8;
+    --bg-tertiary: #EFEDE8;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --accent-blue: #38BDF8;
+    --accent-violet: #7C3AED;
+    --accent-magenta: #DB2777;
+    --accent-cyan: #06B6D4;
+  }
+
+  html.dark {
+    --bg-primary: #070A12;
+    --bg-secondary: #0B1020;
+    --bg-tertiary: #111827;
+    --text-primary: #F7F8FC;
+    --text-secondary: #94A3B8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #F6F4F0;
+    color: #1C1917;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  html.dark body {
+    background-color: #070A12;
+    color: #F7F8FC;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: none;
+    text-align: left;
+  }
+}
+
+/* Custom Utilities for Premium Glassmorphism & Cyberpunk Elegance */
+.glass-panel-glow {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  box-shadow: 0 0 35px -10px rgba(99, 102, 241, 0.25);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #60A5FA 0%, #A855F7 50%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38BDF8 0%, #2DD4BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Transform Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F4F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #070A12;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Subtle background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Hide scrollbars for carousel while maintaining swipe/scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.font-editorial {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.text-influence {
+  background-image: linear-gradient(105deg, #6d28d9 0%, #db2777 46%, #f97316 78%, #38bdf8 130%);
+  background-size: 180% 180%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: influenceShift 12s ease-in-out infinite;
+}
+
+@keyframes influenceShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes auraDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(18px, -14px, 0) scale(1.05); }
+}
+
+.aura-drift {
+  animation: auraDrift 14s ease-in-out infinite;
+}
+
+@keyframes eqBar {
+  0%, 100% { height: 3px; }
+  50% { height: 12px; }
+}
+
+.animate-eq-1 {
+  animation: eqBar 0.9s ease-in-out infinite alternate;
+}
+.animate-eq-2 {
+  animation: eqBar 1.25s ease-in-out infinite 0.2s alternate;
+}
+.animate-eq-3 {
+  animation: eqBar 0.75s ease-in-out infinite 0.4s alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-influence,
+  .aura-drift,
+  .animate-eq-1,
+  .animate-eq-2,
+  .animate-eq-3 {
+    animation: none;
+  }
+}
+

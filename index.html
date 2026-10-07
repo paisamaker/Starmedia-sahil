@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366f1'/><stop offset='50%' stop-color='%23a855f7'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='%23070a12'/><polygon points='50,15 61,38 86,41 68,59 72,84 50,72 28,84 32,59 14,41 39,38' fill='url(%23g)'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#F6F4F0" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('star-media-theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            var theme = document.querySelector('meta[name="theme-color"]');
+            if (theme) theme.setAttribute('content', '#070A12');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>STAR MEDIA — Influencer Marketing Agency in New Delhi</title>
+    <meta name="description" content="STAR MEDIA in New Delhi connects brands with 10,000+ verified creators for influencer campaigns, UGC, and measurable results." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="STAR MEDIA — Influencer Marketing Agency in New Delhi" />
+    <meta property="og:description" content="STAR MEDIA in New Delhi connects brands with 10,000+ verified creators for influencer campaigns, UGC, and measurable results." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="STAR MEDIA" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="/images/star-media-agency-poster.png" />
+    <meta property="og:image:alt" content="STAR MEDIA influencer marketing" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="STAR MEDIA — Influencer Marketing Agency in New Delhi" />
+    <meta name="twitter:description" content="STAR MEDIA in New Delhi connects brands with 10,000+ verified creators for influencer campaigns, UGC, and measurable results." />
+    <meta name="twitter:image" content="/images/star-media-agency-poster.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
