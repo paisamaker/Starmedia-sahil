@@ -4,6 +4,7 @@ import {
   Mail,
   MapPin,
   MessageCircle,
+  Phone,
   Sparkles,
   ArrowRight,
   UserPlus,
@@ -12,7 +13,9 @@ import {
 import { InstagramIcon } from './SocialIcons';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/starmedia_influencer/';
-const WHATSAPP_URL = 'https://wa.me/919999999999';
+const WHATSAPP_URL = 'https://wa.me/916376584267';
+const PHONE_DISPLAY = '+91 63765 84267';
+const PHONE_HREF = 'tel:+916376584267';
 
 const details = [
   {
@@ -25,6 +28,19 @@ const details = [
         className="text-xs sm:text-sm font-bold text-stone-900 hover:text-violet-700 transition-colors"
       >
         contact@starmediainfluencer.com
+      </a>
+    ),
+  },
+  {
+    label: 'Phone',
+    icon: Phone,
+    tone: 'bg-emerald-100/80 text-emerald-700',
+    content: (
+      <a
+        href={PHONE_HREF}
+        className="text-xs sm:text-sm font-bold text-stone-900 hover:text-emerald-700 transition-colors"
+      >
+        {PHONE_DISPLAY}
       </a>
     ),
   },
@@ -59,25 +75,15 @@ export default function ContactSection({ onStartCampaign, onJoinCreator }) {
           {/* Left Column: Official Contact & Location Details (5 cols on lg) */}
           <div className="flex flex-col justify-between lg:col-span-5">
             <div>
-              <div className="flex items-center gap-3">
-                <img
-                  src="/star-media-logo-transparent.png"
-                  alt="STAR MEDIA"
-                  width={56}
-                  height={56}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-12 w-12 sm:h-14 sm:w-14 object-contain drop-shadow-xs"
-                />
-                <div className="flex flex-col leading-none">
-                  <span className="font-sans text-xl sm:text-2xl font-black tracking-wide text-stone-950">
-                    STAR MEDIA
-                  </span>
-                  <span className="mt-0.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.24em] text-red-600">
-                    INFLUENCER
-                  </span>
-                </div>
-              </div>
+              <img
+                src="/star-media-logo.png"
+                alt="STAR MEDIA Influencer"
+                width={696}
+                height={568}
+                loading="lazy"
+                decoding="async"
+                className="h-20 w-auto bg-white sm:h-24"
+              />
 
               <h2 className="mt-4 text-xl sm:text-2xl font-black tracking-tight text-stone-950">
                 Contact Details

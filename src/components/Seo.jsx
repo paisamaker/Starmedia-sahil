@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { absoluteUrl, HOME_DESCRIPTION, HOME_TITLE, SHARE_IMAGE_PATH, SITE_NAME } from '../seo/site';
+import { absoluteUrl, HOME_DESCRIPTION, HOME_TITLE, LOGO_PATH, SHARE_IMAGE_PATH, SITE_NAME } from '../seo/site';
 
 function upsertMeta(attribute, key, content) {
   let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
@@ -57,7 +57,8 @@ export default function Seo({
       graph.forEach((node) => {
         if (node['@type'] === 'Organization' || (Array.isArray(node['@type']) && node['@type'].includes('Organization'))) {
           node.url = url;
-          node.logo = absoluteUrl('/star-media-logo-transparent.png');
+          node.logo = absoluteUrl(LOGO_PATH);
+          node.image = absoluteUrl(LOGO_PATH);
         }
         if (node['@type'] === 'WebSite' || node['@type'] === 'WebPage') {
           node.url = url;

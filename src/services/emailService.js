@@ -1,12 +1,15 @@
 import emailjs from '@emailjs/browser';
 
+const COMPANY_INBOX = 'contact@starmediainfluencer.com';
+
 /**
- * Sends a campaign brief through EmailJS.
- * Recipient address is configured on the EmailJS template, not in this file.
+ * Sends a campaign enquiry through EmailJS.
+ * Set the EmailJS template "To Email" to contact@starmediainfluencer.com
+ * (or {{to_email}} if your template uses that variable).
  *
  * Template variables:
- * name, company, email, phone, campaign_type, budget,
- * target_audience, creator_category, campaign_date, description
+ * to_email, name, company, email, phone, campaign_type, budget,
+ * target_audience, creator_category, campaign_date, description, reply_to
  */
 export async function sendCampaignRequest(fields) {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -21,6 +24,7 @@ export async function sendCampaignRequest(fields) {
     serviceId,
     templateId,
     {
+      to_email: COMPANY_INBOX,
       name: fields.name,
       company: fields.company,
       email: fields.email,

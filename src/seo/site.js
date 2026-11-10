@@ -5,7 +5,8 @@ export const HOME_TITLE = 'STAR MEDIA — Influencer Marketing Agency in New Del
 export const HOME_DESCRIPTION =
   'STAR MEDIA in New Delhi connects brands with 10,000+ verified creators for influencer campaigns, UGC, and measurable results.';
 
-export const SHARE_IMAGE_PATH = '/images/star-media-agency-poster.png';
+export const SHARE_IMAGE_PATH = '/star-media-logo.png';
+export const LOGO_PATH = '/star-media-logo.png';
 
 const PRODUCTION_ORIGIN = 'https://starmediainfluencer.com';
 

@@ -32,7 +32,7 @@ const creatorVerticals = [
 
 export default function Footer({ onNavigate }) {
   const INSTAGRAM_URL = 'https://www.instagram.com/starmedia_influencer/';
-  const WHATSAPP_URL = 'https://wa.me/919999999999';
+  const WHATSAPP_URL = 'https://wa.me/916376584267';
   const EMAIL_ADDRESS = 'contact@starmediainfluencer.com';
   const OFFICE_ADDRESS =
     'Kanchenjunga Bldg, 18, Barakhamba Rd, Fire Brigade Lane, Barakhamba, New Delhi, Delhi 110001';
@@ -54,25 +54,18 @@ export default function Footer({ onNavigate }) {
                 event.preventDefault();
                 onNavigate?.('home');
               }}
+              aria-label="STAR MEDIA Influencer"
               className="group flex items-center gap-2.5 text-left"
             >
               <img
-                src="/star-media-logo-transparent.png"
-                alt="STAR MEDIA"
-                width={44}
-                height={44}
+                src="/star-media-logo.png"
+                alt="STAR MEDIA Influencer"
+                width={696}
+                height={568}
                 loading="lazy"
                 decoding="async"
-                className="h-10 w-10 sm:h-11 sm:w-11 object-contain drop-shadow-xs transition-transform duration-200 group-hover:scale-105"
+                className="h-16 w-auto bg-white sm:h-20"
               />
-              <div className="flex flex-col leading-none">
-                <span className="font-sans text-xl font-black tracking-wider text-stone-950">
-                  STAR MEDIA
-                </span>
-                <span className="mt-0.5 text-[10px] font-extrabold uppercase tracking-[0.24em] text-red-600">
-                  INFLUENCER
-                </span>
-              </div>
             </a>
 
             <p className="mt-2.5 max-w-sm text-xs sm:text-sm font-medium leading-relaxed text-stone-600">
@@ -215,7 +208,7 @@ export default function Footer({ onNavigate }) {
                 </div>
 
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+916376584267"
                   className="flex items-center gap-2.5 rounded-xl border border-stone-200/90 bg-white px-3 py-2 shadow-xs transition-colors hover:border-emerald-300 hover:bg-stone-50/70"
                 >
                   <Phone className="h-3.5 w-3.5 shrink-0 text-emerald-600" />
@@ -224,7 +217,7 @@ export default function Footer({ onNavigate }) {
                       Call Desk
                     </div>
                     <div className="text-xs font-bold text-stone-950">
-                      +91 99999 99999
+                      +91 63765 84267
                     </div>
                   </div>
                 </a>

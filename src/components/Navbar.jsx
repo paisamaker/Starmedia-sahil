@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, Menu, Moon, Sun, User, X } from 'lucide-react';
+import { ArrowUpRight, ClipboardList, Menu, Moon, Sun, X } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const navLinks = [
@@ -13,7 +13,7 @@ const navLinks = [
   { id: 'insights', label: 'Insights' },
 ];
 
-export default function Navbar({ activeRoute, setActiveRoute, onOpenCampaignModal, onOpenLoginModal }) {
+export default function Navbar({ activeRoute, setActiveRoute, onOpenCampaignModal }) {
   const { theme, toggleTheme } = useTheme();
   const reduced = useReducedMotion();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,25 +76,18 @@ export default function Navbar({ activeRoute, setActiveRoute, onOpenCampaignModa
               event.preventDefault();
               handleNavClick('home');
             }}
+            aria-label="STAR MEDIA Influencer"
             className="flex items-center gap-3 sm:gap-3.5 text-left group"
           >
             <img
-              src="/star-media-logo-transparent.png"
-              alt="STAR MEDIA"
-              width={44}
-              height={44}
+              src="/star-media-logo.png"
+              alt="STAR MEDIA Influencer"
+              width={696}
+              height={568}
               decoding="async"
               fetchPriority="high"
-              className="h-11 w-11 sm:h-13 sm:w-13 object-contain drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
+              className="h-16 w-auto bg-white sm:h-20"
             />
-            <div className="flex flex-col leading-none">
-              <span className="font-sans text-xl sm:text-2xl font-black tracking-wide text-stone-950 dark:text-white">
-                STAR MEDIA
-              </span>
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.24em] text-red-600 mt-1">
-                INFLUENCER
-              </span>
-            </div>
           </a>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -138,11 +131,11 @@ export default function Navbar({ activeRoute, setActiveRoute, onOpenCampaignModa
             </button>
             <button
               type="button"
-              onClick={onOpenLoginModal}
+              onClick={onOpenCampaignModal}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-bold text-stone-700 hover:text-stone-950 dark:text-slate-300 dark:hover:text-white transition-colors"
             >
-              <User className="h-4 w-4" />
-              Login
+              <ClipboardList className="h-4 w-4" />
+              Enquiry
             </button>
             <button
               type="button"
@@ -216,12 +209,12 @@ export default function Navbar({ activeRoute, setActiveRoute, onOpenCampaignModa
                 type="button"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  onOpenLoginModal();
+                  onOpenCampaignModal();
                 }}
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-stone-300 px-5 py-3 text-sm font-semibold text-stone-800 dark:border-white/15 dark:text-white"
               >
-                <User className="h-4 w-4" />
-                Login
+                <ClipboardList className="h-4 w-4" />
+                Enquiry
               </button>
             </div>
           </motion.div>

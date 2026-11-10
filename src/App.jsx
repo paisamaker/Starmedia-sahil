@@ -20,7 +20,6 @@ const ContactSection = lazy(() => import('./components/ContactSection'));
 
 const CampaignModal = lazy(() => import('./components/CampaignModal'));
 const CreatorModal = lazy(() => import('./components/CreatorModal'));
-const LoginModal = lazy(() => import('./components/LoginModal'));
 const CaseStudyModal = lazy(() => import('./components/CaseStudyModal'));
 const CreatorProfileViewerModal = lazy(() => import('./components/CreatorProfileViewerModal'));
 
@@ -40,7 +39,6 @@ function HomePage() {
   const [activeRoute, setActiveRoute] = useState('home');
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [isCreatorModalOpen, setIsCreatorModalOpen] = useState(false);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [selectedProfileCreator, setSelectedProfileCreator] = useState(null);
   const [campaignModalData, setCampaignModalData] = useState(null);
@@ -100,7 +98,6 @@ function HomePage() {
         activeRoute={activeRoute}
         setActiveRoute={setActiveRoute}
         onOpenCampaignModal={() => handleStartCampaign()}
-        onOpenLoginModal={() => setIsLoginModalOpen(true)}
       />
 
       {/* Main Content Assembly */}
@@ -170,12 +167,6 @@ function HomePage() {
           <CreatorModal
             isOpen={isCreatorModalOpen}
             onClose={() => setIsCreatorModalOpen(false)}
-          />
-        )}
-        {isLoginModalOpen && (
-          <LoginModal
-            isOpen={isLoginModalOpen}
-            onClose={() => setIsLoginModalOpen(false)}
           />
         )}
         {selectedCaseStudy && (

@@ -39,9 +39,7 @@ function seoPlugin(siteUrl) {
     },
     transformIndexHtml(html) {
       const pageUrl = origin ? `${origin}/` : ''
-      const image = origin
-        ? `${origin}/images/star-media-agency-poster.png`
-        : '/images/star-media-agency-poster.png'
+      const image = origin ? `${origin}/star-media-logo.png` : '/star-media-logo.png'
       const withUrls = (node) => (pageUrl ? { ...node, url: pageUrl } : node)
       const schema = {
         '@context': 'https://schema.org',
@@ -52,7 +50,7 @@ function seoPlugin(siteUrl) {
             email: 'contact@starmediainfluencer.com',
             ...(pageUrl
               ? {
-                  logo: `${origin}/star-media-logo-transparent.png`,
+                  logo: `${origin}/star-media-logo.png`,
                   image,
                 }
               : {}),
@@ -96,7 +94,7 @@ function seoPlugin(siteUrl) {
         `<script type="application/ld+json" id="star-media-schema">${JSON.stringify(schema)}</script>`,
       ].filter(Boolean).join('\n    ')
       const withImage = origin
-        ? html.replaceAll('content="/images/star-media-agency-poster.png"', `content="${image}"`)
+        ? html.replaceAll('content="/star-media-logo.png"', `content="${image}"`)
         : html
       return withImage.replace('</head>', `    ${tags}\n  </head>`)
     },

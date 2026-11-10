@@ -94,10 +94,10 @@ export default function CampaignModal({ isOpen, onClose, initialData }) {
               Star Media
             </p>
             <h3 id="campaign-modal-title" className="font-editorial mt-2 text-3xl tracking-tight text-stone-950 dark:text-white">
-              Start a campaign
+              Campaign enquiry
             </h3>
             <p className="mt-2 mb-6 text-sm text-stone-500 dark:text-slate-400">
-              Tell us about the brief. A strategist will follow up with a creator shortlist.
+              Share your campaign details. We will reply at contact@starmediainfluencer.com with a creator shortlist.
             </p>
             <CampaignForm
               key={`${initialData?.creatorName || 'new'}-${initialData?.category || ''}-${initialData?.budget || ''}`}
